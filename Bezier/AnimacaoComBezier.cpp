@@ -279,6 +279,10 @@ void DesenhaCatavento()
 
 void CriaInstancias()
 {
+
+    Universo[0].posicao = Curva (0);
+    Universo[0].Tatual;
+
     Universo[0].posicao = Ponto (0,0);
     Universo[0].rotacao = 0;
     Universo[0].modelo = DesenhaCatavento;
@@ -304,6 +308,12 @@ void DesenhaUniverso()
     {
         Universo[i].desenha();
     }
+}
+
+
+void atualizaPersonagens()
+{
+
 }
 // ****************************************************************
 //  void display( void )
