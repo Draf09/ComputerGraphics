@@ -130,8 +130,9 @@ void init()
     glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
 
     CarregaModelos();
+    CriaCurvas();  //tem que estar aqui senao dá errado 
     CriaInstancias();
-    CriaCurvas();
+    
     float d = 7;
     Min = Ponto(-d,-d);
     Max = Ponto(d,d);
@@ -326,13 +327,16 @@ void display( void )
     DesenhaEixos();
     
     glLineWidth(1);
-   
+    
+    //AtualizaPersonagens() criar ela , -> teremos um t que começa em 0 e a cada vez que entra nessa funcao , avança o t uma posicao e calcula o valor de t e posiciona o obj
+    //ela vai atualizar todos os personagens
     DesenhaUniverso();
     defineCor(VioletRed);
     TracaBezier3Pontos();
     defineCor(MandarinOrange);
     TracaPontosDeControle(Curva1);
     
+    //ela diz delta t quanto tempo passou desde a ultima vez que foi chamada
     double dt;
     dt = T.getDeltaT();
     
