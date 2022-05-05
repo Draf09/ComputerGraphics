@@ -74,6 +74,7 @@ void TracaPontosDeControle(Ponto PC[])
     glEnd();
 }
 // **************************************************************
+//funcao que calcula o t - o calculo da bezier, pra alterar pra 4 ou spline, deve mudar aqui 
 Ponto CalculaBezier3(Ponto PC[], double t)
 {
     Ponto P;
