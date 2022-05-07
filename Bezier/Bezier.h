@@ -45,6 +45,7 @@ public:
     void Traca();
     double CalculaT(double distanciaPercorrida);
     void calculaComprimentoDaCurva();
+    int calculaDistancia();
 };
 
 #endif 

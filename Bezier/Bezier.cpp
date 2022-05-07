@@ -4,6 +4,7 @@
 // 
 
 #include "Bezier.h"
+#include "math.h"
 
 // **********************************************************************
 Bezier::Bezier()
@@ -37,6 +38,18 @@ void Bezier::calculaComprimentoDaCurva()
     cout << "ComprimentoTotalDaCurva: " << ComprimentoTotalDaCurva << endl;
     
 }
+// **********************************************************************
+int calculaDistancia(Ponto *P1, Ponto *P2) 
+{
+    Ponto d;
+    d = sqrt(pow(P2,2) + pow(P1,2));
+
+    return distancia;
+
+}
+
+// **********************************************************************
+
 // **********************************************************************
 Bezier::Bezier(Ponto P0, Ponto P1, Ponto P2)
 {
