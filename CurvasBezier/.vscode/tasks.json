@@ -1,0 +1,51 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++ build active file",
+            "command": "g++",
+            "args": [
+                "-g",
+                "DesenhaBezier.cpp",
+                "Bezier.cpp",
+                //"Instancia.cpp",
+                //"Linha.cpp",
+                "ListaDeCoresRGB.cpp",
+                "Poligono.cpp",
+                "Ponto.cpp",
+                "Temporizador.cpp",
+                "-lGL",
+                "-lGLU",
+                "-lglut",
+                "-lm",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "windows": {
+                "command": "mingw32-make -f Makefile.mk clean"
+            },
+            "linux": {
+                "command": "make clean"
+            },
+            "osx": {
+                "command": "make clean"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        }
+    ]
+}
